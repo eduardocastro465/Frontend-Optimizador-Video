@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  display: contents;
+
+  /* ══════════════════════════════════════════════════════════
+      SISTEMA DE TIPOGRAFIA CENTRALIZADO
+      Modifica estos valores para cambiar la tipografia
+      en TODA la aplicacion desde un solo lugar.
+      ══════════════════════════════════════════════════════════ */
+
+  /* --- Familias de fuente --- */
+  --font-display: "Sora", sans-serif; /* Títulos grandes (h1, hero) */
+  --font-heading: "Sora", sans-serif; /* Subtítulos (h2, h3) */
+  --font-body: "DM Sans", sans-serif; /* Texto general, párrafos */
+  --font-ui: "DM Sans", sans-serif; /* Labels, botones, inputs */
+  --font-mono: "JetBrains Mono", monospace; /* Código (opcional) */
+
+  /* --- Tamanos de fuente --- */
+  --font-size-display: 42px; /* El título más grande, solo hero */
+  --font-size-h1: 36px; /* Títulos de página principales */
+  --font-size-h2: 22px; /* Subtítulos de sección */
+  --font-size-h3: 18px; /* Subtítulos menores */
+  --font-size-body: 14px; /* Texto de párrafo */
+  --font-size-small: 13px; /* Texto secundario */
+  --font-size-caption: 12px; /* Labels, captions */
+  --font-size-badge: 11px; /* Badges, tags */
+  --font-size-micro: 10px; /* Indicadores mínimos */
+
+  /* --- Pesos de fuente --- */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* --- Alturas de linea --- */
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* --- Espaciado de letras --- */
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.15em;
+  --tracking-widest: 0.2em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}

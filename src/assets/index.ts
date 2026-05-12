@@ -1,0 +1,10 @@
+export { default as EyeClosed } from "./eye-closed.svg";
+export { default as EyeOpen } from "./eye-open.svg";
+export { default as GoogleIcon } from "./google-icon.svg";
+export { default as FacebookIcon } from "./facebook.svg";
+export { default as MailIcon } from "./mailIcon.svg";
+export { default as XIcon } from "./x-icon.svg";
+export { default as InstagramIcon } from "./instagram.svg";
+export { default as LockIcon } from "./lockIcon.svg";
+export { default as ShieldIcon } from "./shieldIcon.svg";
+export { default as ArrowSignIn } from "./arrow-signin.svg";
