@@ -17,6 +17,7 @@ export default {
         "mono": "var(--font-mono)",
       },
       fontSize: {
+        //lineHeight controla el espacio entre lineas (muy pegadas o muy separadas)
         "display": ["var(--font-size-display)", { lineHeight: "var(--line-height-tight)" }],
         "h1": ["var(--font-size-h1)", { lineHeight: "var(--line-height-tight)" }],
         "h2": ["var(--font-size-h2)", { lineHeight: "var(--line-height-snug)" }],
@@ -26,6 +27,7 @@ export default {
         "caption": ["var(--font-size-caption)", { lineHeight: "var(--line-height-normal)" }],
         "badge": ["var(--font-size-badge)", { lineHeight: "var(--line-height-normal)" }],
         "micro": ["var(--font-size-micro)", { lineHeight: "var(--line-height-normal)" }],
+        "error": ["var(--font-size-error)", { lineHeight: "var(--line-height-normal)" }]
       },
       fontWeight: {
         "light": "var(--font-weight-light)",

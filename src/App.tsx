@@ -1,23 +1,17 @@
-import { AppRouter } from "./router";
-
-import { TemaProvider } from "./contexts/TemaContext";
-import { AuthProvider } from "./contexts/AuthContext";
-import { AppProvider } from "./contexts/AppContext";
-import { NotifProvider } from "./contexts/NotifContext";
-import { ChatProvider } from "./contexts/ChatContext";
+import { AppProvider } from "./core/contexts/AppContext";
+import { AuthProvider } from "./core/contexts/AuthContext";
+import AppRouter from "./AppRouter";
 
 export default function App() {
   return (
-    <TemaProvider>
+    <AppProvider>
+      {" "}
+      {/* ← contexto global (tema, idioma, etc.) */}
       <AuthProvider>
-        <NotifProvider>
-          <ChatProvider>
-            <AppProvider>
-              <AppRouter />
-            </AppProvider>
-          </ChatProvider>
-        </NotifProvider>
+        {" "}
+        {/* ← sesión, user, role */}
+        <AppRouter /> {/* ← aquí empiezan las rutas */}
       </AuthProvider>
-    </TemaProvider>
+    </AppProvider>
   );
 }

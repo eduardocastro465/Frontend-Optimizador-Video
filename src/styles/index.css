@@ -21,7 +21,7 @@
   --font-mono: "JetBrains Mono", monospace; /* Código (opcional) */
 
   /* --- Tamanos de fuente --- */
-  --font-size-display: 42px; /* El título más grande, solo hero */
+  --font-size-display: 40px; /* El título más grande, solo hero */
   --font-size-h1: 36px; /* Títulos de página principales */
   --font-size-h2: 22px; /* Subtítulos de sección */
   --font-size-h3: 18px; /* Subtítulos menores */
@@ -30,6 +30,7 @@
   --font-size-caption: 12px; /* Labels, captions */
   --font-size-badge: 11px; /* Badges, tags */
   --font-size-micro: 10px; /* Indicadores mínimos */
+  --font-size-error: 8px; /* tamaño de los errores  */
 
   /* --- Pesos de fuente --- */
   --font-weight-light: 300;
@@ -67,6 +68,7 @@
 }
 
 body {
+  background-color: #07070f ;
   -webkit-font-smoothing: antialiased;
 }
 
