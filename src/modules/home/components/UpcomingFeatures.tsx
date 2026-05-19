@@ -42,7 +42,7 @@ export default function UpcomingFeatures() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>(MOCK);
   const [images, setImages] = useState<File[]>([]);
   const [sent, setSent] = useState(false);
-  const fileRef = useRef<HTMLInputElement>(null);
+  const fileRef = useRef<HTMLInputElement | null>(null);
 
   const handleImages = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files)
@@ -284,7 +284,7 @@ export default function UpcomingFeatures() {
                       >
                         + Añadir imagen de referencia
                       </Button>
-                      <Input
+                      <input
                         ref={fileRef}
                         type="file"
                         accept="image/*"

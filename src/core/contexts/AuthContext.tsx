@@ -5,7 +5,7 @@ import type { AuthContextType } from "../types/auth.types";
 import type { registerForm } from "../schemas/auth.schema";
 import { login, loginGoogle, register } from "../services/auth.services";
 
-export const AuthContext = createContext<AuthContextType | null>(null);
+const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const { user, setUser, clearUser } = useAuthStore();
