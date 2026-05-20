@@ -1,12 +1,9 @@
-/* @refresh reset */
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { useAuthStore } from "../store/authStore";
 import { isAxiosError } from "../api/axiosConfig";
-import type { AuthContextType } from "../types/auth.types";
 import type { registerForm } from "../schemas/auth.schema";
 import { login, loginGoogle, register } from "../services/auth.services";
-
-const AuthContext = createContext<AuthContextType | null>(null);
+import { AuthContext } from "./authContextDef";
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const { user, setUser, clearUser } = useAuthStore();
@@ -96,10 +93,4 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       {children}
     </AuthContext.Provider>
   );
-}
-
-export function useAuth() {
-  const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error("useAuth debe usarse dentro de AuthProvider");
-  return ctx;
 }

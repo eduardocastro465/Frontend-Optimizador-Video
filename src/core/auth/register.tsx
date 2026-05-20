@@ -22,7 +22,7 @@ import Header from "../layout/Header";
 import Stepper, { type StepConfig } from "../components/ui/display/Stepper";
 import OtpInput from "../components/ui/display/OtpInput";
 
-import { useAuth } from "../contexts/AuthContext.tsx";
+import { useAuth } from "../hooks/useAuth.ts";
 import { registerSchema, type registerForm } from "../schemas/auth.schema.ts";
 import DatePicker from "../components/ui/display/Datepicker.tsx";
 import {

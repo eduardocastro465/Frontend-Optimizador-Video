@@ -21,7 +21,7 @@ import SocialButton from "../components/ui/buttons/SocialButton";
 import Divider from "../components/ui/display/Divider";
 import { loginSchema, type LoginForm } from "../schemas/auth.schema";
 
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 
 export default function LoginSection() {
   const [showPassword, setShowPassword] = useState(false);

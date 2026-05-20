@@ -4,7 +4,7 @@ import Header from "../../core/layout/Header";
 
 import Main from "./pages/main";
 
-import Footer from "../../core/layout/Footer";
+// import Footer from "../../core/layout/Footer";
 
 export default function UserRoutes() {
   return (
@@ -13,7 +13,7 @@ export default function UserRoutes() {
       <Routes>
         <Route index element={<Main />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
