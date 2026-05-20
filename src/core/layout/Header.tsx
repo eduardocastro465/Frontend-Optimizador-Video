@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import logo from "@/assets/logo_2.webp";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../hooks/useAuth";
+import type { User } from "../types/user.type";
 
 // ─── Tipos ─────────────────────────────────────────────────
 
@@ -19,7 +20,7 @@ type NavProps = {
 
 type MobileProps = NavProps & {
   open: boolean;
-  user: any;
+  user: User | null;
   onLogout: () => void;
   onClose: () => void;
 };
@@ -73,7 +74,7 @@ function NavDesktop({ activeSection, handleNav }: NavProps) {
 
 // ─── CTA Desktop ───────────────────────────────────────────
 
-function CTADesktop({ user, onLogout }: { user: any; onLogout: () => void }) {
+function CTADesktop({ user, onLogout }: { user: User | null; onLogout: () => void }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

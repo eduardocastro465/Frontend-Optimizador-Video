@@ -51,6 +51,8 @@
   --tracking-wide: 0.025em;
   --tracking-wider: 0.15em;
   --tracking-widest: 0.2em;
+
+  --header-height: 72px;
 }
 
 @media (prefers-color-scheme: dark) {

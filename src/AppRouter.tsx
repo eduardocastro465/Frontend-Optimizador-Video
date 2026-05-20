@@ -6,12 +6,7 @@ import Register from "./core/auth/register";
 import HomeRoutes from "./modules/home/homeRoutes";
 import UserRouters from "./modules/user/userRouters";
 
-export const Roles = {
-  Administrator: 1,
-  Ui_designer: 2,
-  User: 3,
-  Guest: 4,
-};
+import { Roles } from "./core/constants/roles";
 
 export default function AppRouter() {
   return (
