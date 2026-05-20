@@ -1,3 +1,4 @@
+/* @refresh reset */
 import { createContext, useContext, useState, type ReactNode } from "react";
 import { useAuthStore } from "../store/authStore";
 import { isAxiosError } from "../api/axiosConfig";
@@ -12,7 +13,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function loginAuth(identifier: string, password: string): Promise<any> {
+  async function loginAuth(identifier: string, password: string): Promise<boolean> {
     setIsLoading(true);
     setError(null);
 
