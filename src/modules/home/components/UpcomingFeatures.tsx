@@ -42,6 +42,7 @@ export default function UpcomingFeatures() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>(MOCK);
   const [images, setImages] = useState<File[]>([]);
   const [sent, setSent] = useState(false);
+
   const fileRef = useRef<HTMLInputElement | null>(null);
 
   const handleImages = (e: React.ChangeEvent<HTMLInputElement>) => {
