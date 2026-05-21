@@ -30,7 +30,7 @@ export function PanelWrapper({ meta, children, onOpenSidebar }: Props) {
       </div>
 
       {/* Contenido */}
-      <div className="flex-1 overflow-y-auto p-5 flex flex-col gap-4">
+      <div className="flex-1 overflow-y-auto flex flex-col gap-4">
         {children}
       </div>
     </div>

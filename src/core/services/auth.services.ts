@@ -6,6 +6,7 @@ import type { LoginForm, registerForm } from "../schemas/auth.schema";
 export const register = (data: registerForm) => {
   return axiosClient.post(`/auth/register`, data);
 };
+
 export const login = (data: LoginForm) => {
   return axiosClient.post(`/auth/login`, data);
 };
